@@ -1,0 +1,95 @@
+/* @import App.css */
+$main-color: #FF6060;
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .navbar__logo {
+    width: 210px;
+  }
+  .navbar__container {
+    color: $main-color;
+  }
+}
+// .nav-container ul {
+//   color: red;
+//   display: flex;
+//   text-align: right;
+//   list-style-type: none;
+//   justify-content: space-between;
+// }
+
+.nav-container li {
+  margin-right: 10px;
+}
+
+.nav-container a {
+  color: red;
+  text-decoration: none;
+}
+
+.nav-container a:visited {
+  color: red;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.collapse-div p {
+  background-color: red;
+  margin-right: 30px;
+}
+
+.collapse-div {
+  width: 40%;
+}
+
+.collapse-container {
+  display: flex;
+}
+
+.tags-ratings {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+
+.host-detail {
+  display: flex;
+}
+
+.title-logement {
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-container {
+  width: 90%; 
+}
+
+.cards-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(175, 175, 175);
+  margin-top: 20px;
+}
+
+.card {
+  width: 30%;
+}
+
+.img-card {
+width: 100%;
+}
+
+.carroussel {
+  margin: 20px;
+}
