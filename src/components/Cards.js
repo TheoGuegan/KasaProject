@@ -5,8 +5,10 @@ const Cards = (props) => {
 
   return (
     <div className="card">
-      <img src={logement.pictures[0]} alt="" className="img-card" />
-      <h1>{logement.title}</h1>
+      <div className="overlay-img">
+        <img src={logement.pictures[0]} alt="" />
+      </div>
+      <h2>{logement.title}</h2>
     </div>
   );
 };

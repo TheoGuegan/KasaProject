@@ -1,0 +1,29 @@
+.card {
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+
+    .overlay-img {
+        box-shadow: 0 0 0 black;
+        z-index: 3;
+    }
+    img {
+        z-index: 2;
+        width: 100%;
+        border-radius: 15px;
+        min-height: 300px;
+        object-fit: cover;
+        
+
+    }
+    h2 {
+        font-size: 0.8rem;
+        margin-top: -45px;
+        color: $color2;
+        word-wrap: break-word;
+        max-width: 60%;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+}
+

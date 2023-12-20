@@ -1,0 +1,30 @@
+$color1: #FF6060;
+$color2: #FFFFFF;
+$color3: #F6F6F6;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@mixin centerChild {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btnLogement {
+  font-size: 10rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  cursor: pointer;
+  color: white;
+  ;
+}
+
+body {
+    margin: 0 40px;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  

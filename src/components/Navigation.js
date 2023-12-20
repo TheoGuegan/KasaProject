@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Navigation = () => {
   return (
     <div className="navbar">
-      <img src={logoKasa} alt="logo Kasa" className="navbar__logo" />
+      <img src={logoKasa} alt="logo Kasa" />
       <div className="navbar__container">
         <ul>
           <NavLink to="/">

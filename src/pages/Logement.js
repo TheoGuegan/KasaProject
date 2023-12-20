@@ -35,33 +35,46 @@ const Logement = () => {
   return (
     <div>
       <Navigation />
-      <div className="img-container">
-        <button
-          onClick={() => {
-            setPreviousImage();
-          }}
-        >
-          -
-        </button>
-        <button
-          onClick={() => {
-            setNextImage();
-          }}
-        >
-          +
-        </button>
-        <img src={pictures[compteur]} alt="" />
+      <div className="logement-img">
+        <div className="img-container">
+          <div className="btn-container">
+            <button
+              onClick={() => {
+                setPreviousImage();
+              }}
+              className="btn-left"
+            >
+              &lt;
+            </button>
+            <button
+              onClick={() => {
+                setNextImage();
+              }}
+              className="btn-right"
+            >
+              &gt;
+            </button>
+          </div>
+          <img src={pictures[compteur]} alt="Photographie du logement" />
+        </div>
       </div>
       <div className="title-logement">
-        <h1>{logementDetails.title}</h1>
+        <div className="left-title">
+          <h2>{logementDetails.title}</h2>
+          <p>{logementDetails.location}</p>
+        </div>
         <div className="host-detail">
-          <h2>{logementDetails.host.name}</h2>
+          <p>{logementDetails.host.name}</p>
           <img src={logementDetails.host.picture} alt="" />
         </div>
       </div>
-      <p>{logementDetails.location}</p>
+
       <div className="tags-ratings">
-        <p>{logementDetails.tags}</p>
+        <ul>
+          {logementDetails.tags.map((tag, index) => (
+            <li key={index}>{tag}</li>
+          ))}
+        </ul>
         <Rating logementDetails={logementDetails} />
       </div>
       <div className="collapse-container">

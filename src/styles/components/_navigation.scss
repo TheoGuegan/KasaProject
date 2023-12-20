@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 5%;
+
+    img {
+      width: 220px;
+    }
+    ul {
+        color: $color1;
+        display: flex;
+        text-align: center;
+        list-style-type: none;
+        justify-content: space-between;
+    }
+    li {
+        margin-left: 20px;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:visited {
+        color: $color1;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    a:active {
+        text-decoration: underline;
+    }
+}

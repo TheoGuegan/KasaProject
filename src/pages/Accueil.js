@@ -20,11 +20,11 @@ const Accueil = () => {
             }}
             key={logement.id}
           >
-            <Cards key={logement.id} logement={logement} />
+            <Cards key={logement.id} logement={logement} className="card" />
           </NavLink>
         ))}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 };
