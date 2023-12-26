@@ -1,0 +1,47 @@
+.about {
+
+    .about-container {
+       display: flex;
+       align-items: center;
+       height: 100%;
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            width: 80%;
+        }
+    }
+
+
+    .collapse-div {
+        margin-bottom: 30px;
+        width: 100%;
+
+        span {
+            margin-left: 50px;
+            width: 80%;
+            background: $color2;
+            color: $color1;
+        }
+    }
+
+    .collapse-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $color1;
+        color: $color2;
+        font-weight: bold;
+        border-radius: 5px;
+        height: 50px;
+        margin: 30px;
+
+        .collapse-name {
+            margin-left: 15px;
+        }
+
+        img {
+            margin-right: 15px;
+        }
+    }
+}

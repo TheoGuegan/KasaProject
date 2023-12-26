@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import dataBase from "../assets/db.json";
 import Rating from "../components/Rating";
 import Footer from "../components/Footer";
+import Chevron from "../assets/chevron.png";
 
 const Logement = () => {
   const data = dataBase;
@@ -12,6 +13,18 @@ const Logement = () => {
   const urlId = url.pathname.split("/").pop();
 
   const logementDetails = data.find((item) => item.id === urlId);
+
+  const [isSpanEquipmentVisible, setIsSpanEquipmentVisible] = useState(false);
+  const [isSpanDescriptionVisible, setIsSpanDescriptionVisible] =
+    useState(false);
+
+  const toggleSpanDescriptionVisibility = () => {
+    setIsSpanDescriptionVisible((prevValue) => !prevValue);
+  };
+
+  const toggleSpanEquipmentVisibility = () => {
+    setIsSpanEquipmentVisible((prevValue) => !prevValue);
+  };
 
   const pictures = logementDetails.pictures;
   const maxImg = logementDetails.pictures.length;
@@ -55,6 +68,11 @@ const Logement = () => {
               &gt;
             </button>
           </div>
+          <div className="compteur-container">
+            <p>
+              {compteur + 1}/{maxImg}
+            </p>
+          </div>
           <img src={pictures[compteur]} alt="Photographie du logement" />
         </div>
       </div>
@@ -78,25 +96,55 @@ const Logement = () => {
         <Rating logementDetails={logementDetails} />
       </div>
       <div className="collapse-container">
-        <div className="collapse-div">
-          <p>Description</p>
-          <span>{logementDetails.description}</span>
+        <div
+          className={`collapse-div ${
+            isSpanDescriptionVisible ? "span-visible" : ""
+          }`}
+        >
+          <div className="collapse-title">
+            <p className="collapse-name">Description</p>
+            <p className="chevron-container">
+              <img
+                className={`collapse-chevron ${
+                  isSpanDescriptionVisible ? "reverse-rotate" : ""
+                }`}
+                src={Chevron}
+                alt=""
+                onClick={toggleSpanDescriptionVisibility}
+              />
+            </p>
+          </div>
+          {isSpanDescriptionVisible && (
+            <div id="test">
+              <span className="appear-down">
+                <p>{logementDetails.description}</p>
+              </span>
+            </div>
+          )}
         </div>
         <div className="collapse-div">
-          <p
-            onClick={() => {
-              console.log("vous avez cliqué");
-            }}
-          >
-            Equipements
-          </p>
-          <span>
-            <ul>
-              {logementDetails.equipments.map((equipment, index) => (
-                <li key={index}>{equipment}</li>
-              ))}
-            </ul>
-          </span>
+          <div className="collapse-title">
+            <p className="collapse-name">Equipements</p>
+            <p className="chevron-container">
+              <img
+                className={`collapse-chevron ${
+                  isSpanEquipmentVisible ? "reverse-rotate" : ""
+                }`}
+                src={Chevron}
+                alt=""
+                onClick={toggleSpanEquipmentVisibility}
+              />
+            </p>
+          </div>
+          {isSpanEquipmentVisible && (
+            <span>
+              <ul>
+                {logementDetails.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
+                ))}
+              </ul>
+            </span>
+          )}
         </div>
       </div>
       <Footer />

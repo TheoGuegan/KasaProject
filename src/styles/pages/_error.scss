@@ -1,0 +1,22 @@
+.error-page {
+    color: $color1;
+
+    h2 {
+        @include centerChild;
+        font-size: 8rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    p {
+        @include centerChild;
+        font-weight: bold;
+    }
+
+    .link {
+        @include centerChild;
+        margin-top: 50px;
+        color: $color1;
+        text-decoration-color: $color1;
+    }
+}

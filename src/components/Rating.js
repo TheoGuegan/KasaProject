@@ -1,5 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Rating = (props) => {
   const logement = props.logementDetails;
@@ -17,7 +16,7 @@ const Rating = (props) => {
             color: i <= rating ? "#FF6060" : "gray",
           }}
         >
-          <FontAwesomeIcon icon="fa-solid fa-star" />
+          &#9733;
         </span>
       );
     }
