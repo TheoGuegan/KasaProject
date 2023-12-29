@@ -43,13 +43,17 @@ const About = () => {
                 />
               </p>
             </div>
-            {isFiabiliteVisible && (
-              <span>
+            <div
+              className={`collapse-content ${
+                isFiabiliteVisible ? "collapse-content-visible" : ""
+              }`}
+            >
+              <p>
                 Les annonces postées sur Kasa garantissent une fiabilité totale.
                 Les photos sont conformes aux logements, et toutes les
                 informations sont régulièrement vérifiées par nos équipes
-              </span>
-            )}
+              </p>
+            </div>
           </div>
 
           <div className="collapse-div">
@@ -66,13 +70,17 @@ const About = () => {
                 />
               </p>
             </div>
-            {isRespectVisible && (
-              <span>
+            <div
+              className={`collapse-content ${
+                isRespectVisible ? "collapse-content-visible" : ""
+              }`}
+            >
+              <p>
                 La bienveillance fait partie des valeurs fondatrices de Kasa.
                 Tout comportement discriminatoire ou de perturbation du
                 voisinage entraînera une exclusion de notre plateforme.
-              </span>
-            )}
+              </p>
+            </div>
           </div>
 
           <div className="collapse-div">
@@ -89,13 +97,17 @@ const About = () => {
                 />
               </p>
             </div>
-            {isServiceVisible && (
-              <span>
+            <div
+              className={`collapse-content ${
+                isServiceVisible ? "collapse-content-visible" : ""
+              }`}
+            >
+              <p>
                 La bienveillance fait partie des valeurs fondatrices de Kasa.
                 Tout comportement discriminatoire ou de perturbation du
                 voisinage entraînera une exclusion de notre plateforme.
-              </span>
-            )}
+              </p>
+            </div>
           </div>
 
           <div className="collapse-div">
@@ -112,8 +124,12 @@ const About = () => {
                 />
               </p>
             </div>
-            {isSecuriteVisible && (
-              <span>
+            <div
+              className={`collapse-content ${
+                isSecuriteVisible ? "collapse-content-visible" : ""
+              }`}
+            >
+              <p>
                 La sécurité est la prioriété de Kasa. Aussi bien pour nos hôtes
                 que pour les voyageurs, chaque logement correspond aux critères
                 de sécurité établis par nos services. En laissant une note aussi
@@ -121,8 +137,8 @@ const About = () => {
                 vérifier que les standards sont bien respectées. Nous organisons
                 également des ateliers sur la sécurité domestique pour nos
                 hôtes.
-              </span>
-            )}
+              </p>
+            </div>
           </div>
         </ul>
       </div>

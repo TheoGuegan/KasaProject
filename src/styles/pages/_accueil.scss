@@ -1,11 +1,11 @@
 .cards-container {
-    width: 90%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     background: $color3;
-    margin: 20px 5%;
+    margin: 20px 0;
     border-radius: 15px;
+    
     a {
         text-decoration: none;
         width: 30%;

@@ -45,8 +45,9 @@ const Logement = () => {
       setCompteur(++compteur);
     }
   }
+
   return (
-    <div>
+    <div className="logement">
       <Navigation />
       <div className="logement-img">
         <div className="img-container">
@@ -114,13 +115,13 @@ const Logement = () => {
               />
             </p>
           </div>
-          {isSpanDescriptionVisible && (
-            <div id="test">
-              <span className="appear-down">
-                <p>{logementDetails.description}</p>
-              </span>
-            </div>
-          )}
+          <div
+            className={`collapse-content ${
+              isSpanDescriptionVisible ? "collapse-content-visible" : ""
+            }`}
+          >
+            <p>{logementDetails.description}</p>
+          </div>
         </div>
         <div className="collapse-div">
           <div className="collapse-title">
@@ -136,15 +137,17 @@ const Logement = () => {
               />
             </p>
           </div>
-          {isSpanEquipmentVisible && (
-            <span>
-              <ul>
-                {logementDetails.equipments.map((equipment, index) => (
-                  <li key={index}>{equipment}</li>
-                ))}
-              </ul>
-            </span>
-          )}
+          <div
+            className={`collapse-content ${
+              isSpanEquipmentVisible ? "collapse-content-visible" : ""
+            }`}
+          >
+            <ul>
+              {logementDetails.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
       <Footer />

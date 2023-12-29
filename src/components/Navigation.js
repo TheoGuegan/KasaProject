@@ -1,5 +1,5 @@
 import React from "react";
-import logoKasa from "../assets/logo-kasa.png";
+import logoKasa from "../assets/LOGO.png";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
