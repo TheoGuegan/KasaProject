@@ -5,9 +5,7 @@ const Cards = (props) => {
 
   return (
     <div className="card">
-      <div className="overlay-img">
-        <img src={logement.pictures[0]} alt="" />
-      </div>
+      <img src={logement.pictures[0]} alt="" />
       <h2>{logement.title}</h2>
     </div>
   );

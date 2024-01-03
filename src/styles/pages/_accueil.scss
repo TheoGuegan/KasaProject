@@ -14,3 +14,12 @@
         margin-top: 30px;
     }
 }
+
+@media screen and (max-width : 650px) {
+    
+    .cards-container {
+        a {
+            width: 100%;
+        }
+    }
+}

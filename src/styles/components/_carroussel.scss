@@ -50,3 +50,17 @@
         border-radius: 10px;
     }
 }
+
+@media screen and (max-width: 650px) {
+    .carroussel-page1, .carroussel-page2 {
+        height: 115px;
+    }
+
+    .carroussel-page1 {
+        .overlay {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

@@ -11,14 +11,15 @@ $color3: #F6F6F6;
 }
 
 @mixin btnLogement {
-  font-size: 10rem;
   border: none;
-  padding: 0;
+  padding: 0 10px;
   margin: 0;
   background: none;
   cursor: pointer;
-  color: white;
-  ;
+  height: 70px;
+  @media screen and (max-width: 650px) {
+    height: 50px;
+  }
 }
 
 body {
@@ -26,5 +27,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+@media screen and (max-width: 650px) {
+
+  body{
+    margin: 0 20px;
   }
+}
   

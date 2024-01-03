@@ -4,7 +4,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 500px;
     
         .img-container {
             position: relative;
@@ -14,41 +13,43 @@
             border-radius: 20px;
             margin-bottom: 20px;
     
-        img {
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
-            max-height: 100%;
-        }
+            img {
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center center;
+                max-height: 100%;
+            }
 
-        .btn-container {
-            z-index: 2;
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        
-        .compteur-container {
-            position: absolute;
-            bottom: -8%;
-            left: 50%;
-            color: $color2;
-            font-weight: bold;
-            margin-bottom: 40px
-        }
-        }
-    
+            .btn-container {
+                z-index: 2;
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+            }
+            
+            .compteur-container {
+                position: absolute;
+                bottom: -8%;
+                left: 50%;
+                color: $color2;
+                font-weight: bold;
+                margin-bottom: 40px;
 
-
-        .btn-left,
-        .btn-right {
-        padding: 10px;
-        @include btnLogement;
+                @media screen and (max-width: 650px) {
+                    display: none;
+                }
+            }
+            
+            .btn-left,
+            .btn-right {
+            padding: 10px;
+            @include btnLogement;
+            }
         }
     }
     
@@ -56,6 +57,10 @@
     .title-logement {
         display: flex;
         justify-content: space-between;
+        @media screen and (max-width: 650px) {
+            display: block;
+            margin-top: -30px;
+        }
 
         .left-title {
             color: $color1;
@@ -71,14 +76,19 @@
 
         .host-detail {
             display: flex;
+            @media screen and (max-width: 650px) {
+                justify-content: flex-end;
+                margin-top: 200px;
+            }
+
             p {
                 color: $color1;
                 font-weight: bold;
                 width: 80px;
             }
+
             img {
                 border-radius: 100%;
-                margin-right: 80px;
                 width: 80px;
                 height: 80px;
             }
@@ -88,7 +98,6 @@
     .tags-ratings {
         display: flex;
         justify-content: space-between;
-        padding-right: 100px;
         
         ul {
             display: flex;

@@ -4,6 +4,8 @@ import dataBase from "../assets/db.json";
 import Rating from "../components/Rating";
 import Footer from "../components/Footer";
 import Chevron from "../assets/chevron.png";
+import VectorG from "../assets/VectorG.png";
+import VectorD from "../assets/VectorD.png";
 
 const Logement = () => {
   const data = dataBase;
@@ -58,7 +60,7 @@ const Logement = () => {
               }}
               className="btn-left"
             >
-              &lt;
+              <img src={VectorG} alt="" />
             </button>
             <button
               onClick={() => {
@@ -66,7 +68,7 @@ const Logement = () => {
               }}
               className="btn-right"
             >
-              &gt;
+              <img src={VectorD} alt="" />
             </button>
           </div>
           <div className="compteur-container">
