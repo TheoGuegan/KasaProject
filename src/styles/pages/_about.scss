@@ -63,13 +63,14 @@
         background: $color3;
         border-radius: 0 0 5px 5px;
         p {
-            margin: 10px 20px;
+            margin: 10px 20px;  
             color: $color1;
         }
     }
     
     .collapse-content-visible {
         max-height: 300px;
+        height: auto;
     }
 }
 
