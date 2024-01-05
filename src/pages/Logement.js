@@ -4,8 +4,7 @@ import dataBase from "../assets/db.json";
 import Rating from "../components/Rating";
 import Footer from "../components/Footer";
 import Chevron from "../assets/chevron.png";
-import VectorG from "../assets/VectorG.png";
-import VectorD from "../assets/VectorD.png";
+import Carrousel from "../components/Carrousel";
 
 const Logement = () => {
   const data = dataBase;
@@ -28,57 +27,10 @@ const Logement = () => {
     setIsSpanEquipmentVisible((prevValue) => !prevValue);
   };
 
-  const pictures = logementDetails.pictures;
-  const maxImg = logementDetails.pictures.length;
-
-  let [compteur, setCompteur] = useState(0);
-  function setPreviousImage() {
-    if (compteur <= 0) {
-      setCompteur(maxImg - 1);
-    } else {
-      setCompteur(--compteur);
-    }
-  }
-
-  function setNextImage() {
-    if (compteur === maxImg - 1) {
-      setCompteur(0);
-    } else {
-      setCompteur(++compteur);
-    }
-  }
-
   return (
     <div className="logement">
       <Navigation />
-      <div className="logement-img">
-        <div className="img-container">
-          <div className="btn-container">
-            <button
-              onClick={() => {
-                setPreviousImage();
-              }}
-              className="btn-left"
-            >
-              <img src={VectorG} alt="" />
-            </button>
-            <button
-              onClick={() => {
-                setNextImage();
-              }}
-              className="btn-right"
-            >
-              <img src={VectorD} alt="" />
-            </button>
-          </div>
-          <div className="compteur-container">
-            <p>
-              {compteur + 1}/{maxImg}
-            </p>
-          </div>
-          <img src={pictures[compteur]} alt="Photographie du logement" />
-        </div>
-      </div>
+      <Carrousel logementDetails={logementDetails} />
       <div className="title-logement">
         <div className="left-title">
           <h2>{logementDetails.title}</h2>

@@ -5,12 +5,19 @@
        flex-direction: column;
        align-items: center;
        height: 100%;
-       margin-top: 20px;
+       margin: 20px 100px 0 100px;
+       @media screen and (max-width: 768px) {
+        margin: 20px 30px 0 30px;
+        
+       }
 
         ul {
             list-style-type: none;
             padding: 0;
             width: 80%;
+            @media screen and (max-width: 768px) {
+                width: 100%;        
+            }
         }
     }
 
@@ -18,6 +25,24 @@
     .collapse-div {
         margin-bottom: 30px;
         width: 100%;
+
+        .collapse-content {
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height 0.5s linear;
+            background: $color3;
+            color: $color1;
+            border-radius: 0 0 5px 5px;
+            p {
+                margin: 10px 20px;  
+                color: $color1;
+            }
+        }
+        
+        .collapse-content-visible {
+            height: auto;
+            max-height: 250px;
+        }
     }
 
     .collapse-title {
@@ -43,34 +68,13 @@
             text-align: end;
     
             .reverse-rotate {
-                transition: transform 0.5s ease;
-                transform: rotate(-180deg);
-                transform-origin: center;
+                @include reverseRotate;
               }
               
               .collapse-chevron {
-                text-align: end;
-                padding:0 20px;
-                transition: transform 0.5s ease;
+                @include reverseChevron;
             }
         }
-    }
-
-    .collapse-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 1s ease-out;
-        background: $color3;
-        border-radius: 0 0 5px 5px;
-        p {
-            margin: 10px 20px;  
-            color: $color1;
-        }
-    }
-    
-    .collapse-content-visible {
-        max-height: 300px;
-        height: auto;
     }
 }
 

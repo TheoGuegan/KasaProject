@@ -17,22 +17,35 @@ $color3: #F6F6F6;
   background: none;
   cursor: pointer;
   height: 70px;
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 768px) {
     height: 50px;
   }
 }
 
+@mixin reverseRotate {
+  transition: transform 0.5s ease;
+  transform: rotate(-180deg);
+  transform-origin: center;
+}
+
+@mixin reverseChevron {
+  text-align: end;
+  padding:0 20px;
+  height: 1.5rem;
+  transition: transform 0.5s ease;
+}
+
 body {
-    margin: 0 100px;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
 
   body{
-    margin: 0 20px;
+    // margin: 0 20px;
   }
 }
   

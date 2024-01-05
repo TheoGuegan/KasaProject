@@ -16,9 +16,9 @@
 
     h2 {
         position: absolute;
+        bottom: 10px;
         z-index: 3;
         font-size: 0.8rem;
-        margin-top: -50px;
         color: $color2;
         word-wrap: break-word;
         max-width: 70%;
@@ -44,22 +44,22 @@
     flex-wrap: wrap;
     justify-content: space-around;
     background: $color3;
-    margin: 20px 0;
+    margin: 20px 100px;
     border-radius: 15px;
+
+    @media screen and (max-width: 768px) {
+        margin: 0 30px;
+        background: none;
+        
+    }
     
     a {
         text-decoration: none;
         width: 30%;
         min-height: 240px;
-        row-gap: 50px;
-    }
-}
-
-@media screen and (max-width : 650px) {
-    
-    .cards-container {
-        a {
-            width: 100%;   
+        margin-top: 30px;
+        @media screen and (max-width: 768px) {
+            width: 100%;
         }
     }
 }

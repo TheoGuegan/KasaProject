@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import Carroussel from "../components/Carroussel";
+import Banner from "../components/Banner";
 import Chevron from "../assets/chevron.png";
 
 const About = () => {
@@ -26,12 +26,12 @@ const About = () => {
   return (
     <div className="about">
       <Navigation />
-      <Carroussel />
+      <Banner />
       <div className="about-container">
         <ul>
           <div className="collapse-div">
             <div className="collapse-title">
-              <li className="collapse-name">Fiabilité</li>
+              <div className="collapse-name">Fiabilité</div>
               <p className="chevron-container">
                 <img
                   className={`collapse-chevron ${

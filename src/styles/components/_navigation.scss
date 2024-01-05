@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    margin: 40px 0;
+    margin: 40px 100px;
 
     .navbar__container {
         padding-top: 15px;
@@ -35,12 +35,13 @@
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
     .navbar {
-        margin: 20px 0;
+        margin: 20px 30px;
         
         img {
-            width: 150px;
+            width: 120px;
+            margin-top: 15px;
         }
 
         ul {

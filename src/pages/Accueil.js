@@ -2,15 +2,15 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Cards from "../components/Cards";
 import dataBase from "../assets/db.json";
-import Carroussel from "../components/Carroussel";
+import Banner from "../components/Banner";
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const Accueil = () => {
   return (
-    <div>
+    <div className="accueil">
       <Navigation />
-      <Carroussel />
+      <Banner />
       <div className="cards-container">
         {dataBase.map((logement) => (
           <NavLink
