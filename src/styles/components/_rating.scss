@@ -1,4 +1,7 @@
 .rating {
     margin-right: 5px;
     font-size: 1.5rem;
+    @media screen and (max-width: 768px) {
+        margin-top: 30px;
+    }
 }

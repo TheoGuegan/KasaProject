@@ -12,6 +12,9 @@
        }
 
         ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             list-style-type: none;
             padding: 0;
             width: 80%;
@@ -41,7 +44,7 @@
         
         .collapse-content-visible {
             height: auto;
-            max-height: 250px;
+            max-height: 100%;
         }
     }
 

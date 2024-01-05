@@ -24,7 +24,7 @@ const Rating = (props) => {
     return stars;
   };
 
-  return <div>{generateStars()}</div>;
+  return <div className="rating">{generateStars()}</div>;
 };
 
 export default Rating;
