@@ -42,7 +42,7 @@
 .cards-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background: $color3;
     margin: 20px 100px;
     border-radius: 15px;
@@ -55,7 +55,7 @@
     
     a {
         text-decoration: none;
-        width: 30%;
+        width: 28%;
         min-height: 240px;
         margin-top: 30px;
         @media screen and (max-width: 768px) {
