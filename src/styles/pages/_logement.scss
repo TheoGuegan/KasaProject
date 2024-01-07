@@ -54,6 +54,7 @@
             .host-detail {
                 display: flex;
                 margin-bottom: 10px;
+                margin-top: 5px;
 
     
                 p {
@@ -125,7 +126,7 @@
         .collapse-content {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 1s linear;
+            transition: max-height 0.5s linear;
             background: $color3;
             color: $color1;
             border-radius: 0 0 5px 5px;
