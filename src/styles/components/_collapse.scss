@@ -1,0 +1,60 @@
+.collapse-div {
+    margin-bottom: 30px;
+    width: 100%;
+
+    .collapse-content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        background: $color3;
+        color: $color1;
+        border-radius: 0 0 5px 5px;
+        p {
+            margin: 10px 20px;  
+            color: $color1;
+        }
+    }
+    
+    .collapse-content-visible {
+        margin-left: 7px;
+        padding: 12px;
+        height: auto;
+        max-height: 100%;
+    }
+}
+
+.collapse-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $color1;
+    color: $color2;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 50px;
+    // margin: 30px;
+
+    .collapse-name {
+        margin-left: 15px;
+    }
+
+    img {
+        margin-right: 15px;
+    }
+
+    .chevron-container {
+        text-align: end;
+
+        .reverse-rotate {
+            @include reverseRotate;
+          }
+          
+          .collapse-chevron {
+            @include reverseChevron;
+        }
+    }
+}
+// }
+
+
+

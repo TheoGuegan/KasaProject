@@ -15,7 +15,7 @@ const Accueil = () => {
         {dataBase.map((logement) => (
           <NavLink
             to={{
-              pathname: `/cards/${logement.id}`,
+              pathname: `/logement/${logement.id}`,
               state: { logement: logement },
             }}
             key={logement.id}
