@@ -9,15 +9,16 @@
         background: $color3;
         color: $color1;
         border-radius: 0 0 5px 5px;
-        p {
+
+        .content-visu {
             margin: 10px 20px;  
             color: $color1;
         }
+
+
     }
     
     .collapse-content-visible {
-        margin-left: 7px;
-        padding: 12px;
         height: auto;
         max-height: 100%;
     }

@@ -25,7 +25,7 @@ const Collapse = (props) => {
           isVisible ? "collapse-content-visible" : ""
         }`}
       >
-        {props.description}
+        <div className="content-visu">{props.description}</div>
       </div>
     </div>
   );
