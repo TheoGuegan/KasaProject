@@ -10,7 +10,7 @@ const Accueil = () => {
   return (
     <div className="accueil">
       <Navigation />
-      <Banner />
+      <Banner className="carroussel-page1" />
       <div className="cards-container">
         {dataBase.map((logement) => (
           <NavLink

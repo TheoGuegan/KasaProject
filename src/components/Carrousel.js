@@ -27,29 +27,33 @@ const Carrousel = (props) => {
   return (
     <div className="logement-img">
       <div className="img-container">
-        <div className="btn-container">
-          <button
-            onClick={() => {
-              setPreviousImage();
-            }}
-            className="btn-left"
-          >
-            <img src={VectorG} alt="" />
-          </button>
-          <button
-            onClick={() => {
-              setNextImage();
-            }}
-            className="btn-right"
-          >
-            <img src={VectorD} alt="" />
-          </button>
-        </div>
-        <div className="compteur-container">
-          <p>
-            {compteur + 1}/{maxImg}
-          </p>
-        </div>
+        {maxImg > 1 && (
+          <div className="btn-container">
+            <button
+              onClick={() => {
+                setPreviousImage();
+              }}
+              className="btn-left"
+            >
+              <img src={VectorG} alt="" />
+            </button>
+            <button
+              onClick={() => {
+                setNextImage();
+              }}
+              className="btn-right"
+            >
+              <img src={VectorD} alt="" />
+            </button>
+          </div>
+        )}
+        {maxImg > 1 && (
+          <div className="compteur-container">
+            <p>
+              {compteur + 1}/{maxImg}
+            </p>
+          </div>
+        )}
         <img src={pictures[compteur]} alt="Photographie du logement" />
       </div>
     </div>

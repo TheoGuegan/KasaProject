@@ -3,6 +3,10 @@
     justify-content: space-between;
     margin: 40px 100px;
 
+    a.active {
+        text-decoration: underline;
+      }
+
     .navbar__container {
         padding-top: 15px;
     }
@@ -20,19 +24,12 @@
     li {
         margin-left: 20px;
         font-size: 1.5rem;
+        color: $color1;
     }
     a {
         text-decoration: none;
         font-weight: bold;
-    }
-    a:visited {
         color: $color1;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    a:active {
-        text-decoration: underline;
     }
 }
 

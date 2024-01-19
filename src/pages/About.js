@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="about">
       <Navigation />
-      <Banner />
+      <Banner className="carroussel-page2" />
       <div className="about-container">
         <ul>
           <Collapse
